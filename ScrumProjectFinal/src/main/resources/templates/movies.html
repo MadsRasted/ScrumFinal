@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Movies</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<div th:replace="header">...</div>
+<body>
+
+<table class="tables" align="center">
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Year</th>
+        <th>Price</th>
+    </tr>
+    </thead>
+    <tbody>
+
+    <tr th:each="movie: ${movies}">
+        <td th:text="${movie.getName()}"></td>
+        <td th:text="${movie.getYear()}"></td>
+        <td th:text="${movie.getPrice()}"></td>
+    </tr>
+    </tbody>
+</table>
+
+</body>
+</html>

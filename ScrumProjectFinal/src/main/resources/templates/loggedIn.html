@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Login</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<div th:replace="header">...</div>
+<body>
+<h1>Velkommen til leder siden</h1>
+<br>
+<h4>Vælg mellem 'Tilføj film' og 'Tilføj medarbejder'</h4>
+<br>
+<form action="/addEmployee">
+    <button type="button">Tilføj medarbejder</button>
+</form>
+<br>
+<form action="/addMovie">
+    <button type="button">Tilføj film</button>
+</form>
+
+
+</body>
+</html>
